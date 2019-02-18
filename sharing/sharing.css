@@ -1,0 +1,117 @@
+body{
+    font-family: "Microsoft YaHei","Arial","黑体","宋体",sans-serif;
+    font-size: small;
+    background-color: #b5a789;
+    margin: 0px;
+}
+
+header.top{
+    background-color: #675c47;
+    margin: 10px 10px 0px 10px;
+    height: 168px;
+}
+
+header img{
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    background-color: #efe5d0;
+    margin: 10px 10px 0px 10px;
+}
+
+nav ul{
+    margin: 0px;
+    list-style-type: none;
+    padding: 5px 0px 5px 0px;
+}
+
+nav ul li{
+    display:inline;
+    padding:5px 10px 5px 10px;
+}
+
+nav ul li a:link/*选择未被访问的链接*/,nav ul li a:visited/*选择已访问的链接*/{
+    color: #954b4b;
+    border-bottom: none;/*设置下边框的属性*/
+    font-weight: bold;/*规定字体的粗细*/
+    font-size: medium;
+}
+
+nav ul li.selected{
+    background-color: #c8b99c;
+}
+
+div#tableContainer{
+    display: table;
+    border-spacing: 10px;
+}
+
+div#tableRow{
+    display: table-row;
+}
+
+section#introduction{
+    display: table-cell;
+    background: #efe5d0;
+    width: 20%;
+    padding: 15px;
+    vertical-align: top;
+}
+
+section#main{
+    display:table-cell;
+    background: #efe5d0 url(../images/background.png);
+    font-size: 105%;
+    padding: 15px;
+    vertical-align: top;
+}
+
+aside{
+    display: table-cell;
+    background-color: #efe5d0;
+    background-image: url(../images/background.png);
+    font-size: 105%;
+    padding: 15px;
+    vertical-align: top;
+}
+
+h1{
+    font-size: 150%;
+    color: #954b4b;
+}
+
+h2{
+    font-size: 120%;
+    color: #954b4b;
+}
+
+h3{
+    font-size: 110%;
+    color: #954b4b;
+}
+
+.contact_way{
+    text-align: center;
+    line-height: 1.8em;
+}
+
+footer{
+    background-color: #675c47;
+    color: #efe5d0;
+    text-align: center;
+    padding: 15px;
+    margin: 0px 10px 10px 10px;
+    font-size: 90%;
+}
+
+a:link{
+    color: #b76666;
+    text-decoration: none;
+    border-bottom: thin dotted #675c47;
+}
+
+p{
+    text-indent: 2em;
+}

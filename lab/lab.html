@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/xmlReader.js"></script>
+    <script type="text/javascript" src="lab.js"></script>
+    <script type="text/javascript" src="../js/requestNextAnimationFrame.js"></script>
+    <link rel="stylesheet" href="lab.css">
+    <title>实验室</title>
+</head>
+<body>
+
+    <div id="controls">
+        <input type="button" value="点我开始" id="animateButton"/>
+    </div>
+    <canvas id="canvas" width="1000" height="440">
+        对不起，你的浏览器并不支持HTML5！
+    </canvas>
+
+    <h2>使用HttpRequest对象</h2>
+    <p>
+        <b>Status:</b>
+        <span id="show1"></span>
+    </p>
+    <p>
+        <b>Status text:</b>
+        <span id="show2"></span>
+    </p>
+    <p>
+        <b>Response:</b>
+        <span id="show3"></span>
+    </p>
+
+    <button onclick="loadXMLDoc('../sharing/sharing.xml')">获取XML文件</button>
+
+
+</body>
+</html>
