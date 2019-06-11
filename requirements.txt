@@ -1,0 +1,6 @@
+-i http://pypi.doubanio.com/simple/
+Django~=1,11
+Jinja2
+PyMySQL
+django-redis
+-e .
