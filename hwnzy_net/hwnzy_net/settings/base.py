@@ -11,12 +11,12 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
-# 我的ip地址
-STR_IP = '127.0.0.1'
 
 
 # Quick-start development settings - unsuitable for production
@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',  # 博客模块
+    'config',
+    'comment',
 ]
 
 MIDDLEWARE = [
@@ -71,40 +74,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'hwnzy_net.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
-        'HOST': STR_IP,  # 数据库主机
-        'PORT': 3306,  # 数据库端口
-        'USER': 'hwnzy',  # 数据库用户名
-        'PASSWORD': '666666',  # 数据库用户密码
-        'NAME': 'hwnzy_net'  # 数据库名字
-    },
-}
-
-# 配置Redis数据库
-CACHES = {
-    "default": {  # 默认
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/0",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    },
-    "session": {  # session
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    },
-}
-SESSION_ENGINE = "django.contrib.sessions.backends.cache"  # 修改session存储机制使用Redis保存
-SESSION_CACHE_ALIAS = "session"  # 使用名为"session"的Redis配置项存储session数据
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -128,9 +97,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
