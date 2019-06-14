@@ -1,6 +1,7 @@
--i http://pypi.doubanio.com/simple/
-Django~=1,11
-Jinja2
-PyMySQL
-django-redis
--e .
+Django==1.11.21
+django-redis==4.10.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+PyMySQL==0.9.3
+pytz==2019.1
+redis==3.2.1

@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = 'ev8#_ik6edui6m5t3i=7zb!r(52fn(6wj1#bv5r38a4&=&5_*^'
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -57,8 +57,8 @@ ROOT_URLCONF = 'hwnzy_net.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.jinja2.Jinja2',  # 配置Jinja2模版引擎
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # 配置模版文件加载路径
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +69,23 @@ TEMPLATES = [
             ],
         },
     },
+    # {
+    #     'BACKEND': 'django.template.backends.jinja2.Jinja2',  # 配置Jinja2模板引擎
+    #     'DIRS': [os.path.join(BASE_DIR, 'templates')],  # 配置模板文件加载路径
+    #     'APP_DIRS': True,
+    #     'OPTIONS': {
+    #         'context_processors': [
+    #             'django.template.context_processors.debug',
+    #             'django.template.context_processors.request',
+    #             'django.contrib.auth.context_processors.auth',
+    #             'django.contrib.messages.context_processors.messages',
+    #         ],
+    #         # 补充Jinja2模板引擎环境
+    #         'environment': 'hwnzy_net.utils.jinja2_env.jinja2_environment',
+    #     },
+    # },
 ]
+
 
 WSGI_APPLICATION = 'hwnzy_net.wsgi.application'
 
